@@ -1,0 +1,52 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "remote.SSH.remotePlatform": {
+        "192.168.2.30": "linux",
+        "192.168.2.204": "linux"
+    },
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "workbench.colorTheme": "Visual Studio 2019 Light",
+    "editor.fontFamily": "'Cascadia Mono'",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": false,
+    "editor.lineHeight": 18,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.formatOnPaste": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.1,
+    "terminal.integrated.fontLigatures.featureSettings": "\"calt\" off",
+    "terminal.integrated.fontWeightBold": "bold",
+    "window.zoomLevel": 0,
+    "chat.agentSessionsViewLocation": "disabled",
+    "editor.formatOnSave": true,
+    "python.formatter.provider": "ruff",
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "window.title": "${folderName}",
+    "chat.tools.urls.autoApprove": {
+        "https://docs.github.com/en/rest/copilot": {
+            "approveRequest": false,
+            "approveResponse": true
+        },
+        "https://github.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        },
+        "https://raw.githubusercontent.com": {
+            "approveRequest": false,
+            "approveResponse": true
+        }
+    },
+    "resharper.region.region": "Europe",
+    "resharper.dataSharing.allowDataSharing": false,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.tools.terminal.autoApprove": {
+        "npx tsc": true,
+        "cargo check": true,
+        "dotnet build": true
+    },
+    "claudeCode.preferredLocation": "panel"
+}
