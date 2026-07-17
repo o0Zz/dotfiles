@@ -1,0 +1,35 @@
+Windows Registry Editor Version 5.00
+
+; Open PowerShell here (right-click inside a folder background)
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenPowerShellHere]
+@="Open PowerShell here"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenPowerShellHere\command]
+@="powershell.exe -NoExit -Command Set-Location -LiteralPath '%V'"
+
+; Open PowerShell here (Admin) (right-click inside a folder background)
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenPowerShellHereAdmin]
+@="Open PowerShell here (Admin)"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenPowerShellHereAdmin\command]
+@="powershell.exe -NoExit -Command Start-Process powershell.exe -ArgumentList '-NoExit','-Command','Set-Location -LiteralPath ''%V''' -Verb RunAs"
+
+; Open PowerShell here (right-click on a folder)
+[HKEY_CLASSES_ROOT\Directory\shell\OpenPowerShellHere]
+@="Open PowerShell here"
+"Icon"="powershell.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenPowerShellHere\command]
+@="powershell.exe -NoExit -Command Set-Location -LiteralPath '%1'"
+
+; Open PowerShell here (Admin) (right-click on a folder)
+[HKEY_CLASSES_ROOT\Directory\shell\OpenPowerShellHereAdmin]
+@="Open PowerShell here (Admin)"
+"Icon"="powershell.exe"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenPowerShellHereAdmin\command]
+@="powershell.exe -NoExit -Command Start-Process powershell.exe -ArgumentList '-NoExit','-Command','Set-Location -LiteralPath ''%1''' -Verb RunAs"
