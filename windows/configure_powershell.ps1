@@ -42,7 +42,7 @@ $actionsToAdd = @()
 if ($content -notmatch '"keys"\s*:\s*"ctrl\+pgup"') {
     $actionsToAdd += @'
         {
-            "command": "nextTab",
+            "command": "prevTab",
             "keys": "ctrl+pgup"
         }
 '@
@@ -51,7 +51,7 @@ if ($content -notmatch '"keys"\s*:\s*"ctrl\+pgup"') {
 if ($content -notmatch '"keys"\s*:\s*"ctrl\+pgdn"') {
     $actionsToAdd += @'
         {
-            "command": "prevTab",
+            "command": "nextTab",
             "keys": "ctrl+pgdn"
         }
 '@
