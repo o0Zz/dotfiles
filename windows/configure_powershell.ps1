@@ -75,6 +75,15 @@ if ($content -notmatch '"keys"\s*:\s*"ctrl\+shift\+t"') {
 '@
 }
 
+if ($content -notmatch '"keys"\s*:\s*"f2"') {
+    $actionsToAdd += @'
+        {
+            "command": "openTabRenamer",
+            "keys": "f2"
+        }
+'@
+}
+
 if ($actionsToAdd.Count -gt 0) {
     $newActions = $actionsToAdd -join ",`r`n"
 
@@ -209,6 +218,7 @@ Write-Host "Shortcuts:"
 Write-Host "  Ctrl+Page Up   -> Next tab"
 Write-Host "  Ctrl+Page Down -> Previous tab"
 Write-Host "  Ctrl+T         -> New tab in the same folder"
+Write-Host "  F2             -> Rename the current tab"
 Write-Host
 Write-Host "Restart Windows Terminal to activate all changes."
 Write-Host "Settings backup: $settingsBackup"
